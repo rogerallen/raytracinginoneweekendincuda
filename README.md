@@ -14,7 +14,7 @@ This repository contains code for converting the first ray tracer ebook "Ray Tra
 
 Before coding the ray tracer in CUDA, I recommend that you code the ray tracer in C++, first.  You should understand the concepts presented in a serial language well, then translate this knowledge to CUDA.  In fact, since CUDA uses C++, much of your code can be reused.
 
-The canonical C++ code from Peter Shirley is at https://github.com/petershirley/raytracinginoneweekend.  I am basing this on https://github.com/pfranz/raytracinginoneweekend which has each chapter as a separate git branch.  This is very handy for checking out the code at each chapter.
+The canonical C++ code from Peter Shirley is at https://github.com/RayTracing/raytracing.github.io.  I am basing this on https://github.com/pfranz/raytracinginoneweekend which has each chapter as a separate git branch.  This is very handy for checking out the code at each chapter.
 
 Chapter List
 ------------
