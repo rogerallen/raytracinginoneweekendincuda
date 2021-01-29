@@ -12,7 +12,7 @@ GENCODE_FLAGS  = -gencode arch=compute_75,code=sm_75		# Tesla T4
 
 SRCS = main.cu
 INCS = src/cameras/camera.h \
-       src/math/vec3.h \
+       src/math/vector3D.h \
        src/geometries/hitable.h \
        src/geometries/hitable_list.h \
        src/geometries/sphere.h \

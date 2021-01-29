@@ -8,8 +8,8 @@ class material;
 struct hit_record
 {
     float t;
-    vec3 p;
-    vec3 normal;
+    vector3D p;
+    vector3D normal;
     material *mat_ptr;
 };
 
