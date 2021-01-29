@@ -7,10 +7,17 @@ NVCC           = $(CUDA_PATH)/bin/nvcc -ccbin $(HOST_COMPILER)
 NVCC_DBG       =
 
 NVCCFLAGS      = $(NVCC_DBG) -m64
-GENCODE_FLAGS  = -gencode arch=compute_60,code=sm_60
+GENCODE_FLAGS  = -gencode arch=compute_75,code=sm_75		# Tesla T4
+# GENCODE_FLAGS  = -gencode arch=compute_37,code=sm_37		# Tesla K80
 
 SRCS = main.cu
-INCS = vec3.h ray.h hitable.h hitable_list.h sphere.h camera.h material.h
+INCS = vec3.h \
+	   ray.h \
+	   hitable.h \
+	   hitable_list.h \
+	   sphere.h \
+	   camera.h \
+	   material.h
 
 cudart: cudart.o
 	$(NVCC) $(NVCCFLAGS) $(GENCODE_FLAGS) -o cudart cudart.o
