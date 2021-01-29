@@ -11,13 +11,13 @@ GENCODE_FLAGS  = -gencode arch=compute_75,code=sm_75		# Tesla T4
 # GENCODE_FLAGS  = -gencode arch=compute_37,code=sm_37		# Tesla K80
 
 SRCS = main.cu
-INCS = vec3.h \
-	   ray.h \
-	   hitable.h \
-	   hitable_list.h \
-	   sphere.h \
-	   camera.h \
-	   material.h
+INCS = src/cameras/camera.h \
+       src/math/vec3.h \
+       src/geometries/hitable.h \
+       src/geometries/hitable_list.h \
+       src/geometries/sphere.h \
+       src/materials/material.h \
+       src/utilities/ray.h
 
 cudart: cudart.o
 	$(NVCC) $(NVCCFLAGS) $(GENCODE_FLAGS) -o cudart cudart.o
